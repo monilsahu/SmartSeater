@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xmlns="http://xmlns.jcp.org/xml/ns/index.html">
+<display-name>JavaAPI</display-name>
+    
+<sevlet>
+    <servlet-name>JavaAPI</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer.class</servlet-class>
+    <init-param>
+        <param-name>jersey.config.server.provider.packages</param-name>
+        <param-value>seater</param-value>
+   </init-param>
+   <load-on-startup>1</load-on-startup>
+   
+</sevlet>
+<servlet-mapping>
+        <servlet-name>JavaAPI</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+</servlet-mapping>    
+
+</web-app>
